@@ -1,0 +1,82 @@
+/* TODO: inserite il CSS necessario per completare il MHW! */
+
+:root {
+    --border-size: 1px;
+    --padding-size: 10px;
+  }  
+
+.choice-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.choice-grid div {
+    background-color: #f4f4f4;
+    border: var(--border-size) solid #dcdcdc;
+    padding: var(--padding-size);
+    width: calc(32.5% - var(--border-size)*2 - var(--padding-size)*2);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.choice-grid div.selected {
+    background-color: #cfe3ff;
+}
+
+div.not-selected {
+    opacity: 0.6;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.results {
+    background-color: rgba(0,0,0,0.95);
+    margin: 20px 0px;
+    padding: 20px;
+}
+
+.results h1,
+.results p {
+    color: aliceblue;
+}
+
+.results button {
+    height: 50px;
+    width: 100%;
+    background-color: #cecece;
+
+    display: block;
+}
+
+.results button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Mobile version */
+
+@media (max-width: 700px) {
+    article {
+        width: 95%;
+    }
+
+    header div span {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .choice-grid div {
+        width: calc(49% - var(--border-size)*2 - var(--padding-size)*2);
+    }
+
+    /* In modo da mantenere centrato anche l'ultimo div di
+        risposta */
+    .choice-grid {
+        justify-content: space-around;
+    }
+}
